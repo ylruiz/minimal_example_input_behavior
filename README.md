@@ -1,16 +1,21 @@
-# input_in_selectio_area
+# input_in_selection_area
 
-A new Flutter project.
+Minimal example to reproduce a strange behaviour with the input when they are within a SelectionArea widget.
+
+- If you run the project using v3.3.x users will be able to type in the input without any issues.
+- If you run the project using v3.7.x or v3.10.2 users are **NOT** able to type in the inputs anymore.
+
+This happens when we open the url within our **_mobile browser_**. In desktop browsers, it works as expected.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Find out what is your network IP address.
 
-A few resources to get you started if this is your first Flutter project:
+2. Run the app using the following command
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+`flutter run -d web-server --web-port (port) --web-hostname (network-ip-address)`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Hit the link http://(network-ip-address):(port) which should open the app
+
+
+**NOTE**: Please, be sure you are using the right version of Flutter in order to reproduce the error since it works find with  v3.3.x but it doesn't work as expected when using v3.7.x or v3.10.2  
